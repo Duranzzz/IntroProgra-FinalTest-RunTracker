@@ -42,8 +42,22 @@ string get_achievement(double dist) {
 
 // TODO: Implemente las funciones restantes:
 //       show_message
-//       get_time_hms
+// Funcion que sirve para mostrar los datos sugeridos con el formato solicitado
+void show_message(times t, int steps, double dist, double calories, string achievement){
+
+}
+
+//        get_time_hms
+// Esta funcion convierte los segundos en horas, minutos y segundos, y los vuelve como miembros de la esctructura 'times'
+times get_time_hms(long seconds){
+
+}
+
 //       format_time
+// Transforma los miembros tipo 'times' en una secuencia de caracteres con el formato de hora solicitado
+string format_time(times t){
+
+}
 
 // TODO: Implemente la funcion madre
 // Esta funcion debe llamar a las otras para realizar lo indicado en el pdf
