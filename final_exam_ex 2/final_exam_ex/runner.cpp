@@ -64,7 +64,15 @@ double get_calories_burned(double dist, times current_time) {
 // TODO: Implemente esta funcion
 // Devuelve una string con el mensaje de motivacion segun la distancia recorrida
 string get_achievement(double dist) {
-  return "";
+  if (dist >= 6.5) {
+    return "¡Gran entrenamiento! Objetivo cumplido.";
+  } else if (dist >= 3.9) {
+    return "¡Nada mal! Hoy ha sido un día productivo.";
+  } else if (dist >= 2.0) {
+    return "Menos que el resultado deseado, ¡pero intenta alcanzarlo mañana!";
+  } else {
+    return "Está bien tomarse el día de descanso. No siempre se puede ganar.";
+  }
 }
 
 // TODO: Implemente las funciones restantes:
