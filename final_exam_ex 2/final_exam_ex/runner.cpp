@@ -85,7 +85,11 @@ void show_message(times t, int steps, double dist, double calories, string achie
 //        get_time_hms
 // Esta funcion convierte los segundos en horas, minutos y segundos, y los vuelve como miembros de la esctructura 'times'
 times get_time_hms(long seconds){
-
+  times t;
+  t.hour = seconds / 3600;
+  t.min = (seconds % 3600) / 60;
+  t.sec = seconds % 60;
+  return t;
 }
 
 //       format_time
