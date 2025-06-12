@@ -95,7 +95,23 @@ times get_time_hms(long seconds){
 //       format_time
 // Transforma los miembros tipo 'times' en una secuencia de caracteres con el formato de hora solicitado
 string format_time(times t){
-
+  string hour, min, sec;
+  if (t.hour < 10) {
+    hour = "0" + to_string(t.hour);
+  } else {
+    hour = to_string(t.hour);
+  }
+  if (t.min < 10) {
+    min = "0" + to_string(t.min);
+  } else {
+    min = to_string(t.min);
+  }
+  if (t.sec < 10) {
+    sec = "0" + to_string(t.sec);
+  } else {
+    sec = to_string(t.sec);
+  }
+  return hour + ":" + min + ":" + sec;
 }
 
 // TODO: Implemente la funcion madre
