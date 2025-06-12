@@ -30,9 +30,19 @@ bool check_correct_time(long seconds) {
 
 // TODO: Implemente esta funcion
 // Devuelve la suma total de los pasos dados durante el dia
-int get_step_day(int steps) {
-  return 0;
+int get_step_day(int steps) {   //Parámetro no usado
+  int total_steps = 0;
+  for (int i = 0; i < storage_data.size(); i++){
+    total_steps += storage_data[i].steps;
+  }
+  return total_steps;
 }
+/*
+ * Suma todos los pasos almacenados en storage_data.
+ * El parámetro 'steps' no se utiliza porque:
+ *   - storage_data ya contiene todos los paquetes válidos
+ *   - El problema pide "pasos dados hoy" (total diario)
+ */
 
 // TODO: Implemente esta funcion
 // Devuelve la distancia recorrida segun los pasos dados durante el dia
