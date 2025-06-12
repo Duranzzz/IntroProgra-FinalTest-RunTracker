@@ -7,6 +7,12 @@ vector<package> storage_data = {};
 // TODO: Implente esta funcion.
 // Verifique que la data en el paquete sea valida
 bool check_correct_data(package data) {
+  if (data.steps <= 0 or data.segundos <= 0){
+    return false;
+  }
+  if (storage_data.size() == 0){
+    return true;
+  }
   return true;
 }
 
