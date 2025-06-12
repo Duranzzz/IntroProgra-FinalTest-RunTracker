@@ -54,7 +54,11 @@ double get_distance(int steps) {
 // TODO: Implemente esta funcion
 // Devuelve las calorias quemadas segun la distancia recurrida
 double get_calories_burned(double dist, times current_time) {
-  return 0;
+  double hours = current_time.hour + current_time.min/60.0 + current_time.sec/3600.0;
+  double mean_speed = dist / hours;
+  double minutes = hours * 60;
+  double cal_burned = (K_1 * WEIGHT + ((mean_speed * mean_speed)/HEIGHT) * K_2 * WEIGHT) * minutes;
+  return cal_burned;
 }
 
 // TODO: Implemente esta funcion
