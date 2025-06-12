@@ -47,7 +47,8 @@ int get_step_day(int steps) {   //Parámetro no usado
 // TODO: Implemente esta funcion
 // Devuelve la distancia recorrida segun los pasos dados durante el dia
 double get_distance(int steps) {
-  return 0;
+  double distance = (steps * STEP_M) / 1000.0;
+  return distance;
 }
 
 // TODO: Implemente esta funcion
