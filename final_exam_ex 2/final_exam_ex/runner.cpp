@@ -19,6 +19,12 @@ bool check_correct_data(package data) {
 // TODO: Implemente esta funcion.
 // Verifique que el tiempo obtenido sea correcto.
 bool check_correct_time(long seconds) {
+  if (storage_data.size() == 0 and seconds > 0){
+    return true;
+  }
+  if (seconds <= storage_data[storage_data.size() - 1].segundos){
+    return false;
+  }
   return true;
 }
 
