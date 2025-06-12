@@ -79,7 +79,13 @@ string get_achievement(double dist) {
 //       show_message
 // Funcion que sirve para mostrar los datos sugeridos con el formato solicitado
 void show_message(times t, int steps, double dist, double calories, string achievement){
-
+  cout << "Tiempo: " << format_time(t) << "." << endl;
+  cout << "Pasos dados hoy: " << steps << "." << endl;
+  cout << "La distancia fue " << dist << "km." << endl;
+  cout << "Has quemado " << calories << "cal." << endl;
+  //printf("La distancia fue %.2f km.\n", dist);
+  //printf("Has quemado %.2f cal.\n", calories);
+  cout << achievement << endl << endl;
 }
 
 //        get_time_hms
