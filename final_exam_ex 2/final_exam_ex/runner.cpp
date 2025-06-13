@@ -123,5 +123,20 @@ string format_time(times t){
 // TODO: Implemente la funcion madre
 // Esta funcion debe llamar a las otras para realizar lo indicado en el pdf
 vector<package> accept_package(package data) {
+  if (!check_correct_data(data)){
+    return storage_data;
+  }
+  if (!check_correct_time(data.segundos)){
+    return storage_data;
+  }
+  storage_data.push_back(data);
+
+  times t = get_time_hms(data.segundos);
+  int total_steps = get_step_day(0);
+  double dist = get_distance(total_steps);
+  double calories = get_calories_burned(dist, t);
+  string msg = get_achievement(dist);
+
+  show_message(t, total_steps, dist, calories, msg);
   return storage_data;
 }
