@@ -85,6 +85,12 @@ void show_message(times t, int steps, double dist, double calories, string achie
   cout << "Has quemado " << calories << "cal." << endl;
   //printf("La distancia fue %.2f km.\n", dist);
   //printf("Has quemado %.2f cal.\n", calories);
+  //NUEVA SALIDA AGREGADA PARA EL OBJETIVO PROPUESTO POR EL USUARIO
+  if ((DAYLY_GOAL - steps) <= 0) {
+    cout << "Objetivo diario superado!" << endl;
+  } else {
+    cout << "Faltan " << DAYLY_GOAL - steps << " pasos para tu meta." << endl;
+  }
   cout << achievement << endl << endl;
 }
 
