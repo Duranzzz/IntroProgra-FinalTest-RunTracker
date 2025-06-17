@@ -1,4 +1,4 @@
-#include "runner.h"
+#include "runner.cpp"
 
 int main() {
   /*

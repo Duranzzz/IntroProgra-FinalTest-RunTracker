@@ -18,7 +18,7 @@ vector<package> accept_package(package data);
 
 // TODO: Implemente los protitopis de funciones restantes:
 //       show_message
-void show_message(times t, int steps, double dist, double calories, string achievement);
+void show_message(times t, int steps, double dist, double calories, const string& achievement);
 //       get_time_hms
 times get_time_hms(long seconds);
 //       format_time
